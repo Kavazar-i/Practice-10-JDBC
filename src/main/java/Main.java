@@ -3,7 +3,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Main {
-    private static final DataBaseSettings SETTINGS = new DataBaseSettings();
+    private static final DataBaseSettings SETTINGS = new DataBaseSettings(); // Default settings. Me, this settings for PSQL, but you can use your own for MySQL.
+//    private static final DataBaseSettings SETTINGS = new DataBaseSettings(<DB_URL>, <USER>, <PASSWORD>); // Custom settings
 
     private static final String COORDINATES_TABLE = "Coordinates";
     private static final String FREQUENCIES_TABLE = "Frequencies";
@@ -37,7 +38,7 @@ public class Main {
                     boolean flag = false;
                     for (Pair frequency : frequencies) {
                         if (frequency.len == len) {
-                            frequency.num ++;
+                            frequency.num++;
                             flag = true;
                             break;
                         }

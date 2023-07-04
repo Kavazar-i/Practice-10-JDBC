@@ -7,6 +7,12 @@ public class DataBaseSettings {
     private final String user;
     private final String password;
 
+    public DataBaseSettings(String DB_URL, String USER, String PASSWORD) {
+        this.dbUrl = DB_URL;
+        this.user = USER;
+        this.password = PASSWORD;
+    }
+
     public DataBaseSettings() {
         this.dbUrl = DB_URL;
         this.user = USER;
